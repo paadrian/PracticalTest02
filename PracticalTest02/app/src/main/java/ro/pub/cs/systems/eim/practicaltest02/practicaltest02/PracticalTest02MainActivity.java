@@ -83,18 +83,19 @@ public class PracticalTest02MainActivity extends AppCompatActivity {
                 {
                     case "add":
                     {
-                        printWriter.write(a + b);
+                        printWriter.write(String.valueOf(a + b));
                         break;
                     }
                     case "mul":
                     {
                         Thread.sleep(2000);
-                        printWriter.write(a * b);
+                        printWriter.write(String.valueOf(a * b));
                         break;
                     }
                 }
+                printWriter.flush();
 
-                Log.i("server", reader.readLine());
+                Log.i("server", cmds[0] + cmds[1] + cmds[2]);
 
 
 //                printWriter.println(serverTextEditText.getText().toString());
